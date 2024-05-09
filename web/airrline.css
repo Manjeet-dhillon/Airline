@@ -1,0 +1,419 @@
+/* Resetting some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.main
+ {
+     position: fixed;
+     left: 35%;
+  width: 420px;
+  background-color:transparent;
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 40px;
+  backdrop-filter:blur(40px);
+  border-style: solid ;
+
+ }
+ .main h1 {
+  text-align: center;
+  font-size: 36px;
+ }
+ .main .inputs{
+  height: 50px;
+  width: 100%;
+  background:transparent;
+  margin: 30px 0;
+ }
+ .inputs input{
+  width: 100%;
+  height: 100% ;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255,255,255,.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+
+ }
+ .inputs input ::placeholder{
+  color: #fff;
+ }
+ .main .rember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px ;
+ }
+ .rember-forgot label{
+  accent-color: #fff;
+  margin-right: 3px;
+ }
+.rember-forgot a{
+  color: #fff;
+  text-decoration: none;
+}
+.rember-forgot a:hover{
+  text-decoration: underline;
+}
+.main .batan{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+.main .register{
+
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+.register p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register p a :hover{
+  text-decoration: underline;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-btn {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Search Flight Styles */
+.search-flight {
+  margin-top: 50px;
+
+}
+
+.search-flight h2 {
+  margin-bottom: 20px;
+}
+
+.search-flight input[type="text"],
+.search-flight button {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-flight button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.i1{
+    background-color: whitesmoke;
+}
+.i1 option{
+    background-color: whitesmoke;
+    color: black;
+}
+.cont th h1 {
+    font-weight: bold;
+    font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.cont td {
+    font-weight: normal;
+    font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+     -moz-box-shadow: 0 2px 2px -2px #0E1119;
+          box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.cont {
+    text-align: center;
+    overflow: hidden;
+    width: 95%;
+    margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+.cont td, .cont th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+  padding-left:2%;  
+}
+
+/* Background-color of the odd rows */
+.cont tr:nth-child(odd) {
+    background-color: whitesmoke;
+}
+
+/* Background-color of the even rows */
+.cont tr:nth-child(even) {
+    background-color: white;
+}
+
+.cont th {
+    background-color: whitesmoke;
+    color: blue;
+    font-weight: bold;
+}
+.cont thead{
+    color: skyblue;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+  }
+  .login-btn {
+      margin-left: auto;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.login-btn {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+span img {
+  background-position: center;
+  background-size: cover;
+  max-width: 80px;
+  max-height: 30px;
+}
+.login-button{
+    
+    max-width: 100px;
+  max-height: 50px;
+}
+
+.hero {
+  background-image: url('img/WhatsApp Image 2024-05-03 at 11.14.33_aaeb6df6.jpg' );
+  background-size: cover;
+  color: #fff;
+  padding: 80px 0;
+  height: 500px;
+ margin-left: -80px;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+
+
+.features {
+  padding: 50px 0;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.feature-item {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.feature-item img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.gallery {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-images img {
+  margin: 10px;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+/* book ticket css */
+
+
+.form-popup {
+  
+  position: fixed;
+  bottom: 5%;
+  right: 35%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  background-color: transparent;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 850px;
+  backdrop-filter:blur(50px);
+  
+}
+
+
+
+/* Full-width input fields */
+.form-container input[type=text] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+
+/* Set a style for the submit button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  
+  border: none;
+  cursor: pointer;
+  
+  width: 40%;
+  
+ height: 30px;
+ 
+  border-radius: 5px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #f44336;
+  margin-left: 40px;
+}
+
+/* Add padding and border to the buttons */
+.form-container .button {
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+/* Clear floats */
+.form-container .button::after
+{
+  
+  clear: both;
+  display: table;
+}
