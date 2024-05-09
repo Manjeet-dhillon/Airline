@@ -13,7 +13,7 @@
         <title>JSP Page</title>
         <link rel="stylesheet" href="airrline.css"/>
     </head>
-    <body bgcolor="grey">
+    <body bgcolor="black">
         
         
         <%  
