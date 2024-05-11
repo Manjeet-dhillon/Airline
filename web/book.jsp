@@ -6,6 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,34 +15,39 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <h1>hello</h1>
         <%
-            try {
-
-                String name = request.getParameter("name");
-                String ano = request.getParameter("adhar");
-                String classs = request.getParameter("classs");
-                String fcode = request.getParameter("fcode");
-                String age = request.getParameter("age");
-                String from = request.getParameter("from");
-                 String to = request.getParameter("to");
+            
+            String name = request.getParameter("name");
+            String adhar = request.getParameter("adhar");
+            String classs = request.getParameter("classs");
+            String fcode = request.getParameter("fcode");
+            String age = request.getParameter("age");
+            String from = request.getParameter("from");
+            String to = request.getParameter("to");
             String gender = request.getParameter("gender");
+            String fare=null;
             
-            if(classs.equals("economy"))
-            {
+            String efare=request.getParameter("efare");
+             String bfare=request.getParameter("bfare");
+              String ffare=request.getParameter("ffare");
             
-                    out.println("<script>alert('ticket booked succesfully');</script>");            
+         if(classs.equals("Economy"))
+         {
+            fare=efare;
+             
+        }
+        else if(classs.equals("Business"))
+        {
+        fare=bfare;
+        
+        }
+        out.println(fare);
+        
             
             
+         
             
-            
-            }
-
-
-            } 
-            catch (Exception e) {
-                out.println(e.getMessage());
-            }
-
 
         %>
     </body>

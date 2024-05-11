@@ -21,8 +21,8 @@
 
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="img/travelling.png"/></span><br><a href="#search-flight">Book Flight</a></li>
                         <li><span><img src="img/motorcycle.png"/></span><br><a href="#ride">Ride</a></li>
-                        <li><span><img src="img/bus.png"/></span><br><a href="#buses">Buses</a></li>
-                        <li><span><img src="https://via.placeholder.com/150"/></span><br><a href="#buses">My Tickets</a></li>
+                        <li><span><img src="img/bus.png"/></span><br><a href="">Buses</a></li>
+                        <li><span><img src="https://via.placeholder.com/150"/></span><br><a href="">My Tickets</a></li>
                     </ul>
                     <img src="img/profile.png" style="max-width: 90px;max-height: 40px" onclick="openForm()"/>
                 </nav>
@@ -119,6 +119,9 @@
            </td>
            <td>
               <input type="hidden" name="t1" value="<%=  rs.getString(11)%>"/>
+              <input type="hidden" name="efare" value="<%=  rs.getString(6)%>"/>
+              <input type="hidden" name="bfare" value="<%=  rs.getString(8)%>"/>
+              <input type="hidden" name="ffare" value="<%=  rs.getString(10)%>"/>
            </td>
              
             
