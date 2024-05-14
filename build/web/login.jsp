@@ -38,8 +38,8 @@
 
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="img/travelling.png"/></span><br><a href="#search-flight">Book Flight</a></li>
                         <li><span><img src="img/motorcycle.png"/></span><br><a href="#ride">Ride</a></li>
-                        <li><span><img src="img/bus.png"/></span><br><a href="">Buses</a></li>
-                        <li><span><img src="https://via.placeholder.com/150"/></span><br><a href="">My Tickets</a></li>
+                        <li>&nbsp;<span><img src="img/bus.png"/></span><br><a href="">Buses</a></li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="img/ticket (1).png"/></span><br><a href="mytickets.jsp">My Tickets</a></li>
                     </ul>
                     <img src="img/profile.png" style="max-width: 90px;max-height: 40px" onclick="openForm()"/>
                 </nav>
@@ -55,7 +55,7 @@
     <center>
         <div class="search-flight" id="search-flight">
             <h2>Search Flights</h2>
-            <form action="search.jsp">
+            <form action="search1.jsp">
 
                 <input type="text" name="d1" placeholder="departure City" list="departureCities">
                 <datalist id="departureCities" class="i1" >
@@ -77,6 +77,63 @@
             </form>
         </div>
     </center>
+     <table  class="cont">
+        <thead><tr><td>Flight code</td><td>Airline name</td><td>  From </td><td>  To  </td><td>Economy price</td><td>Business price</td><td>First class price</td><td>Remark</td>
+
+        </thead>
+        <%
+            
+            try {
+
+                
+                ps.setString(1, request.getParameter("d1"));
+                ps.setString(2, request.getParameter("d2"));
+              
+                session.setAttribute("from",request.getParameter("d1") );
+                 session.setAttribute("to",request.getParameter("d2") );
+
+                while (rs.next()) {
+        %>
+        <form action="bookticket.jsp">
+       
+              <tr>
+            <td><%=  rs.getString(11)%></td>
+            <td><%=rs.getString(2)%></td>
+            <td><%=rs.getString(3)%></td>
+            <td><%=rs.getString(4)%></td>
+            <td><%=rs.getString(6)%></td>
+            <td><%=rs.getString(8)%></td>
+            <td><%=rs.getString(10)%></td>
+           
+                  <td>
+                <input type="submit" value="Book Ticket"/>
+                
+           </td>
+           <td>
+              <input type="hidden" name="t1" value="<%=  rs.getString(11)%>"/>
+              <input type="hidden" name="efare" value="<%=  rs.getString(6)%>"/>
+              <input type="hidden" name="bfare" value="<%=  rs.getString(8)%>"/>
+              <input type="hidden" name="ffare" value="<%=  rs.getString(10)%>"/>
+           </td>
+             
+            
+        </tr>
+       
+        </form>
+       
+        
+
+
+
+
+        <%}
+            } catch (Exception e) {
+                out.println(e.getMessage());
+            }
+
+
+        %>
+    </table>
     <section class="features">
         <div class="container">
             <h2>Why Choose Us?</h2>

@@ -23,8 +23,9 @@
 
         
         %>
+       
         <div class="form-popup" id="myForm">
-        <form action="book.jsp" class="form-container">
+        <form class="form-container">
             <h1>Passenger Details</h1>
 
             
@@ -55,9 +56,20 @@
             Female<input type="radio"  name="gender"  value="Female"required>
             prefer not to say<input type="radio"  name="gender"  value="Female"required>
             <section class="button">
-                <button type="submit" class="btn">Book Now</button>
-                <button type="button" class="btn cancel" href="search.jsp">Close</button></section>
+                <button type="submit" class="btn" onclick="openFormb()">Book Now</button>
+                <button type="button" class="btn cancel" href="login.jsp">Close</button></section>
         </form>
     </div>
+            
+<script>
+            function openFormb() {
+                document.getElementById("book").style.display = "block";
+            }
+
+            function closeFormb() {
+                document.getElementById("login").style.display = "none";
+            }
+        </script>
+            
     </body>
 </html>

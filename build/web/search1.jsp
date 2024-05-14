@@ -14,19 +14,7 @@
         <link rel="stylesheet" href="airrline.css"/>
     </head>
     <body>
-        <%
-            try{
-            
-            
-            Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/airways?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false", "root", "root");
-                    PreparedStatement ps = con.prepareStatement("Select * from user where user_id=? and password=?");  
-                    ps.setString(1,request.getParameter("username"));
-                    ps.setString(2,request.getParameter("password"));
-                    ResultSet rs=ps.executeQuery();
-                    if (rs.next()) {
-                out.println("<script>alert('Login successfully');</script>");
-                %>
+        
         
                 <header>
             <div class="container">
@@ -55,7 +43,7 @@
     <center>
         <div class="search-flight" id="search-flight">
             <h2>Search Flights</h2>
-            <form action="search1.jsp">
+            <form action="search.jsp" method="post">
 
                 <input type="text" name="d1" placeholder="departure City" list="departureCities">
                 <datalist id="departureCities" class="i1" >
@@ -77,7 +65,7 @@
             </form>
         </div>
     </center>
-     <table  class="cont">
+      <table  class="cont">
         <thead><tr><td>Flight code</td><td>Airline name</td><td>  From </td><td>  To  </td><td>Economy price</td><td>Business price</td><td>First class price</td><td>Remark</td>
 
         </thead>
@@ -85,10 +73,12 @@
             
             try {
 
-                
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/airways?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false", "root", "root");
+                PreparedStatement ps = con.prepareStatement("Select * from flight where source=? and destination=?");
                 ps.setString(1, request.getParameter("d1"));
                 ps.setString(2, request.getParameter("d2"));
-              
+                ResultSet rs = ps.executeQuery();
                 session.setAttribute("from",request.getParameter("d1") );
                  session.setAttribute("to",request.getParameter("d2") );
 
@@ -170,21 +160,6 @@
     
     </div>
    
-        <%
-                
-            } else {
-                out.println("<script>alert('Failed to Login');</script>");
-              
-          %> 
-          <jsp:include page="index.html"/>  
-        <% }
-           
-            }
-            catch (Exception e)
-            {
-            out.println(e.getMessage());
-            }
-            
-            %>
+     
     </body>
 </html>

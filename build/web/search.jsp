@@ -22,7 +22,7 @@
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="img/travelling.png"/></span><br><a href="#search-flight">Book Flight</a></li>
                         <li><span><img src="img/motorcycle.png"/></span><br><a href="#ride">Ride</a></li>
                         <li><span><img src="img/bus.png"/></span><br><a href="">Buses</a></li>
-                        <li><span><img src="https://via.placeholder.com/150"/></span><br><a href="">My Tickets</a></li>
+                        
                     </ul>
                     <img src="img/profile.png" style="max-width: 90px;max-height: 40px" onclick="openForm()"/>
                 </nav>
