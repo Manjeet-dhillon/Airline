@@ -15,7 +15,7 @@
             <div class="container">
                 <nav>
                     <div class="logo" >
-                        <img src="img/logo-removebg-preview.png" alt="Airline Logo" href="index.html">
+                        <img src="img/logoair-removebg-preview.png" alt="Airline Logo" href="index.html">
                     </div>
                     <ul class="navbar">
 

@@ -12,56 +12,90 @@
             function openForm() {
                 document.getElementById("login").style.display = "block";
             }
+             function openForm1() {
+                document.getElementById("login").style.display = "block";
+                 document.getElementById("registeru").style.display = "none";
+            }
+            
 
             function closeForm() {
                 document.getElementById("login").style.display = "none";
+                document.getElementById("registeru").style.display = "none";
             }
+             function registerForm() {
+                document.getElementById("registeru").style.display = "block";
+                document.getElementById("login").style.display = "none";
+            }
+              
+
         </script>
 
-       
+
 
         <header>
             <div class="container">
                 <nav>
                     <div class="logo">
-                        <img src="img/logo-removebg-preview.png" alt="Airline Logo">
+                        <img src="img/logoair-removebg-preview.png" alt="Airline Logo">
                     </div>
                     <ul class="navbar">
 
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="img/travelling.png"/></span><br><a href="#search-flight">Book Flight</a></li>
-                        <li><span><img src="img/motorcycle.png"/></span><br><a href="#ride">Ride</a></li>
+                        <li><span><img src="img/motorcycle.png"/></span><br><a  href="#ride">Ride</a></li>
                         <li><span><img src="img/bus.png"/></span><br><a href="#buses">Buses</a></li>
-                        
+
                     </ul>
                     <img src="img/profile.png" style="max-width: 90px;max-height: 40px" onclick="openForm()"/>
                 </nav>
             </div>
         </header>
-         <div class="main" style="display: none" id="login">
-             <h1>LOGIN</h1><button onclick="closeForm()">X</button>
-            
-             <form action="login.jsp">
-                 
-          <div class="inputs">
-                <input type="text" name="username" placeholder="username" required/>
-            </div>
-            <div class="inputs">
-                <input type="password" name="password" placeholder="password" required/>
-            </div> 
-            <div class=" rember-forgot">
-                <label><input type="checkbox">remember me</label>
-                <a href="">Forgot password</a>
-            </div>
-            
+        <div class="main" style="display: none" id="login">
+            <h1>LOGIN</h1><button onclick="closeForm()" class="batan" style="height: 30px;width: 20px;position: relative;left: 95%;" >X</button>
+
+            <form action="login.jsp">
+
+                <div class="inputs">
+                    <input type="text" name="username" placeholder="username" required/>
+                </div>
+                <div class="inputs">
+                    <input type="password" name="password" placeholder="password" required/>
+                </div> 
+                <div class=" rember-forgot">
+                    <label><input type="checkbox">remember me</label>
+                    <a href="">Forgot password</a>
+                </div>
+
 
                 <button type="submit" class="batan">Login</button>
             </form>
             <div class="register">
-                <p>Don't have an account ?<a href="">Register</a></p>
+                <p>Don't have an account ?<button class="btn" style="height: 30px;max-width: 100px;"id="registerbtn" onclick="registerForm()">Register</button></p>
             </div>
 
         </div>
+        <div class="main" style="display: none" id="registeru">
+            <h1>Signup</h1><button onclick="closeForm()"  class="batan" style="height: 30px;width: 20px;position: relative;left: 95%;">X</button>
 
+            <form action="book.jsp">
+
+                <div class="inputs">
+                    <input type="text" name="Fullname" placeholder="Fullname" required/>
+                </div>
+                <div class="inputs">
+                    <input type="password" name="password" placeholder="password" required/>
+                </div> 
+                <div class="inputs">
+                    <input type="email" name="email" placeholder="email" required/>
+                </div>
+                <div class="inputs">
+                    <input type="text" name="phone" placeholder="Mobile no" required/>
+                </div>
+
+
+                <button type="submit" class="batan">signup</button>
+                <p style="color: black">have an account ?<button class="btn" style="height: 30px;max-width: 100px;"id="login" onclick="openForm1()">Login</button></p>
+            </form>
+        </div>
         <section class="hero">
             <div class="container"> 
 

@@ -20,7 +20,7 @@
             <div class="container">
                 <nav>
                     <div class="logo" >
-                        <img src="img/logo-removebg-preview.png" alt="Airline Logo" href="index.html">
+                        <img src="img/logoair-removebg-preview.png" alt="Airline Logo" href="index.html">
                     </div>
                     <ul class="navbar">
 
@@ -81,6 +81,8 @@
                 ResultSet rs = ps.executeQuery();
                 session.setAttribute("from",request.getParameter("d1") );
                  session.setAttribute("to",request.getParameter("d2") );
+                 
+                 
 
                 while (rs.next()) {
         %>
@@ -89,6 +91,7 @@
               <tr>
             <td><%=  rs.getString(11)%></td>
             <td><%=rs.getString(2)%></td>
+           
             <td><%=rs.getString(3)%></td>
             <td><%=rs.getString(4)%></td>
             <td><%=rs.getString(6)%></td>
@@ -104,6 +107,9 @@
               <input type="hidden" name="efare" value="<%=  rs.getString(6)%>"/>
               <input type="hidden" name="bfare" value="<%=  rs.getString(8)%>"/>
               <input type="hidden" name="ffare" value="<%=  rs.getString(10)%>"/>
+              <input type="hidden" name="aname" value="<%=  rs.getString(2)%>"/>
+            
+             
            </td>
              
             

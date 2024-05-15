@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
+<%@ page import="java.util.Random" %>
 
 
 <!DOCTYPE html>
@@ -15,38 +16,30 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>hello</h1>
+
         <%
-            
-            String name = request.getParameter("name");
-            String adhar = request.getParameter("adhar");
-            String classs = request.getParameter("classs");
-            String fcode = request.getParameter("fcode");
-            String age = request.getParameter("age");
-            String from = request.getParameter("from");
-            String to = request.getParameter("to");
-            String gender = request.getParameter("gender");
-            String fare=null;
-            
-            String efare=request.getParameter("efare");
-             String bfare=request.getParameter("bfare");
-              String ffare=request.getParameter("ffare");
-            
-         if(classs.equals("Economy"))
-         {
-            fare=efare;
+
+            String name = request.getParameter("Fullname");
+            String password = request.getParameter("password");
+            String email = request.getParameter("email");
+            String phoneno = request.getParameter("phone");
+            Random random = new Random();
+            int randomNumber = random.nextInt(10000);
+             String userid =  randomNumber + name;
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/airways?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false", "root", "root");
+            PreparedStatement ps = con.prepareStatement("insert into user values (?,?,?,?,?) ");
+            ps.setString(1, name);
+            ps.setString(2, email);
+            ps.setString(3, password);
+            ps.setString(4, userid);
+            ps.setString(5, phoneno);
+
+            int rs = ps.executeUpdate();
              
-        }
-        else if(classs.equals("Business"))
-        {
-        fare=bfare;
-        
-        }
-        out.println(fare);
-        
+           
             
-            
-         
             
 
         %>

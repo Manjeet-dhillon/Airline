@@ -8,8 +8,9 @@
 
 .main
  {
-     position:relative ;
-     left: 5%;
+     position:fixed ;
+     left: 35%;
+     top: 10%;
   width: 420px;
   background-color:transparent;
   color: #fff;
@@ -67,6 +68,7 @@
   height: 45px;
   background: #fff;
   border: none;
+  border-style: none;
   outline: none;
   border-radius: 40px;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
@@ -97,7 +99,7 @@ body {
 
 /* Navbar styling */
 .navbar {
-  background-color: #333;
+  background-color: whitesmoke;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -239,7 +241,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: whitesmoke;
   padding: 20px 0;
 }
 
@@ -260,7 +262,7 @@ nav {
 
 .navbar li a {
   text-decoration: none;
-  color: #fff;
+  color: black;
 }
 
 .logo img {
@@ -356,6 +358,8 @@ footer {
 
 .form-popup {
   
+  position: relative;
+  left: 35%;
   
   border: 3px solid #f1f1f1;
   z-index: 9;
@@ -414,4 +418,23 @@ footer {
   
   clear: both;
   display: table;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .login-btn {
+    margin-left: auto;
+  }
+  .main {
+    width: 90%;
+    left: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    width: 80%;
+    left: 10%;
+  }
 }
